@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+    <h2>Books</h2>
+    {% for book in books %}
+    <p>{{ book.title }}</p>
+    <p>{{ book.publication_date }}</p>
+    {% for gen in book.genre.all %}
+        <p>{{ gen }}</p>
+    {% endfor %}
+    {% for au in book.author.all %}
+        <p>{{ au }}</p>
+    {% endfor %}
+    {% endfor %}
+    <hr>
+    <h2>Genres</h2>
+    {% for genre in genres %}
+    <p>{{ genre.name }}</p>
+    {% endfor %}
+    <hr>
+
+    <h2>Authors</h2>
+    {% for author in authors %}
+    <p>{{ author.name }}</p>
+    {% endfor %}
+    <hr>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+<body>
+<h2>Libraries</h2>
+{% for library in librarys %}
+<p>{{ library }}</p>
+{% endfor %}
+<h2>Books</h2>
+{% for book in books %}
+<p>{{ book.name }}</p>
+<p>{{ book.library }}</p>
+{% endfor %}
+</body>
+</html>
