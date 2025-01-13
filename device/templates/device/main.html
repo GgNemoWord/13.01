@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for device in devices %}
+        <p>{{ device }}</p>
+    <a href="{% url 'delete' device.pk %}">delete</a>
+    {% endfor %}
+</body>
+</html>
